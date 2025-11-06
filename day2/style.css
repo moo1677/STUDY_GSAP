@@ -1,0 +1,96 @@
+.ease {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+  /* flex-direction: column; */
+  padding: 20px;
+}
+#box1,
+#box2,
+#box3,
+#box4,
+#box5 {
+  display: block;
+  background-color: greenyellow;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+.stagger {
+  overflow: hidden;
+}
+
+.section,
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 300px;
+}
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+.box3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+.text {
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* green_box*/
+.box2 {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(106, 255, 47);
+  border-radius: 10px;
+  margin: 3px;
+}
+.stagger_box_array,
+.loading_character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.array {
+  display: flex;
+  justify-content: space-around;
+}
+
+.green {
+  background-color: rgb(109, 250, 109);
+}
+.purple {
+  background-color: rgb(251, 115, 251);
+}
+.orange {
+  background-color: rgb(251, 204, 117);
+}
+
+.loading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 100px;
+}
+#loading_boll {
+  background-color: #f4a614;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+#loading_text {
+  font-size: 100px;
+  color: rgb(255, 91, 91);
+}
