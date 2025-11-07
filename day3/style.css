@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  margin-top: 50px;
+  width: auto;
+  height: auto;
+}
+button {
+  text-transform: none;
+  margin: 0.25rem;
+}
+.flair {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  border-radius: 10px;
+}
+.nav {
+  padding-top: 2rem;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.callBack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(229, 149, 51);
+  border-radius: 15px;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(172, 226, 54);
+}
+.scrollTrigger {
+  margin-top: 1000px;
+  width: 100%;
+  align-items: start;
+}
