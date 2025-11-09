@@ -18,7 +18,12 @@
 
 - 문제 해결 : 애니메이션 성능 최적화, 반응형 웹에서의 애니메이션 처리 등 실제 개발에서 마주할 수 있는 문제를 경험하고 해결한다.
 
-## 3. 회고록
+## 3. 간단한 제품 소개 페이지 만들기
+
+[Figma 바로가기](https://www.figma.com/design/KdhW6t0XUAX8HnLZ0Rt4ef/Running-High-X?node-id=0-1&p=f&t=as3U3b7KJobin2rE-0)
+진행 중인 프로젝트의 프로토 디자인입니다.
+
+## 4. 회고록
 
 [Notion 바로가기](https://www.notion.so/4-5-2a2109530380808db991d4f283473c5e?source=copy_link/)
 notion에 매일 꾸준히 공부한 내용을 작성할 예정입니다.
