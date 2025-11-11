@@ -46,29 +46,32 @@ ScrollTrigger.create({
 const upper = gsap.timeline();
 upper
   .from("#upper", { y: "+=100", autoAlpha: 0 })
-  .from(".upper-body", { y: "+=50", autoAlpha: 0 }, "+=-0.2<");
+  .from(".upper-body", { y: "+=50", autoAlpha: 0 }, "+=0.2<");
 ScrollTrigger.create({
   animation: upper,
   trigger: "#feature-upper",
   start: "top-=500 top",
+  anticipatePin: 1,
 });
 const insole = gsap.timeline();
 insole
   .from("#insole", { y: "+=100", autoAlpha: 0 })
-  .from(".insole-body", { y: "+=50", autoAlpha: 0 }, "+=-0.2<");
+  .from(".insole-body", { y: "+=50", autoAlpha: 0 }, "+=0.2<");
 ScrollTrigger.create({
   animation: insole,
   trigger: "#feature-insole",
   start: "top-=500 top",
+  anticipatePin: 1,
 });
 const outsole = gsap.timeline();
 outsole
   .from("#outsole", { y: "+=100", autoAlpha: 0 })
-  .from(".outsole-body", { y: "+=50", autoAlpha: 0 }, "+=-0.2<");
+  .from(".outsole-body", { y: "+=50", autoAlpha: 0 }, "+=0.2<");
 ScrollTrigger.create({
   animation: outsole,
   trigger: "#feature-outsole",
   start: "top-=500 top",
+  anticipatePin: 1,
 });
 
 const weightShoes = gsap.timeline();
@@ -96,6 +99,7 @@ ScrollTrigger.create({
   start: "top top",
   end: "+=2500",
   pin: true,
+  anticipatePin: 1,
 });
 
 const endShoe = gsap.timeline();
@@ -107,4 +111,5 @@ ScrollTrigger.create({
   animation: endShoe,
   trigger: "#running-high-end",
   start: "top-=500 top",
+  anticipatePin: 1,
 });
