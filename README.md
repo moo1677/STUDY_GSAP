@@ -23,6 +23,9 @@
 [Figma 바로가기](https://www.figma.com/design/KdhW6t0XUAX8HnLZ0Rt4ef/Running-High-X?node-id=0-1&p=f&t=as3U3b7KJobin2rE-0)
 진행 중인 프로젝트의 프로토 디자인입니다.
 
+[페이지 바로가기](https://rainbow-taiyaki-2f6e51.netlify.app/)
+크롬 브라우저에서 실행하길 권고드립니다.
+
 ## 4. 회고록
 
 [Notion 바로가기](https://www.notion.so/4-5-2a2109530380808db991d4f283473c5e?source=copy_link/)
