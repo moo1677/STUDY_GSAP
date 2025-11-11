@@ -1,4 +1,6 @@
 body {
+  background-color: black;
+  min-width: 1200px;
   margin: 0;
 }
 #running-high-intro {
@@ -6,11 +8,12 @@ body {
   align-items: center;
   flex-direction: column;
   height: 1138px;
+  background-color: #fff;
 }
 h1.intro-title {
   font-size: 120px;
   font-weight: 800;
-  color: #727272;
+  color: #ffffff;
 }
 .x-graphic {
   margin-top: 50px;
@@ -24,7 +27,8 @@ h1.intro-title {
   position: absolute;
   width: 1100px;
   height: 110px;
-  background-color: black;
+  background-color: rgb(127, 127, 127);
+  z-index: 1;
 }
 .bar-1 {
   transform: rotate(20deg);
@@ -54,6 +58,9 @@ h1.intro-title {
   width: 100%;
   background-color: black;
   margin: 0;
+}
+#running-high-design {
+  height: 2000px;
 }
 .design-title,
 .upper-title,
@@ -107,6 +114,7 @@ h2.outsole-body {
   margin: 0;
 }
 .feature {
+  margin-top: 100px;
   width: 100%;
   display: flex;
 }
@@ -120,20 +128,21 @@ h2.outsole-body {
   margin: 0;
   padding: 0;
   width: 571px;
+  transform: translate(300px, 0);
   z-index: 3;
 }
 .insole {
   margin: 0;
   padding: 0;
   width: 615px;
-  transform: translate(20px, -249px);
+  transform: translate(320px, -249px);
   z-index: 2;
 }
 .outsole {
   margin: 0;
   padding: 0;
   width: 660px;
-  transform: translate(50px, -528px);
+  transform: translate(350px, -528px);
   z-index: 1;
 }
 .shoes-info-container {
@@ -172,7 +181,7 @@ h2.outsole-body {
   width: 600px;
 }
 #shoes-weight {
-  height: 2350px;
+  height: 2000px;
 }
 h1.weight-title {
   margin-top: 300px;
@@ -191,11 +200,13 @@ h1.weight-title {
   transform: rotate(40deg) translate(-250px, -350px);
 }
 #grass {
-  width: 100%;
+  min-width: 1200px;
+  transform: translateY(-1500px);
+  z-index: -1;
 }
 h1.weight-text {
   font-size: 100px;
-  transform: translateY(-800px);
+  transform: translateY(-2700px);
   color: #fff;
 }
 
@@ -204,15 +215,21 @@ h1.end-title {
 }
 .end-container {
   display: flex;
-  width: 100%;
+  min-width: 1200px;
+  height: 600px;
 }
 .end-shoe {
+  flex: 0.7;
+  height: 600px;
+}
+#end-shoe {
   width: 1000px;
 }
 .end-info {
-  flex: 1;
+  flex: 0.3;
   margin-top: 6rem;
   margin-left: 2rem;
+  height: 600px;
 }
 .record-info-container h2,
 .weight-info-container h2 {
