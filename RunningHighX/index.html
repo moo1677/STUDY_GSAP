@@ -31,10 +31,9 @@
       <video
         id="shoeVideo"
         src="./asset/runningHighX.mp4"
-        preload
+        preload="auto"
         muted
-        playsinline="auto"
-        autoplay
+        playsinline
       ></video>
     </section>
     <section id="shoe-features">
@@ -81,10 +80,10 @@
         <h1>서브웨이 쿠션.</h1>
         <h1>집밥과 같은 편안함.</h1>
       </div>
-      <h2 class="insole-body">
+      <h2 class="insole-body body-1">
         서브웨이 쿠션을 사용한 미드솔은 기존과의 쿠션과는 전혀 다릅니다.
       </h2>
-      <h2 class="insole-body">
+      <h2 class="insole-body body-2">
         마치 구름 위를 걷는 듯한 안정적이고 편안한 쿠션을 경험해보세요.
       </h2>
       <img id="insole" src="./asset/insole.png" />
@@ -114,7 +113,9 @@
     <section id="running-high-end">
       <h1 class="end-title">멀찌감치 앞서다.</h1>
       <div class="end-container">
-        <img class="end-shoe" src="./asset/runninghigh.png" />
+        <div class="end-shoe">
+          <img id="end-shoe" src="./asset/runninghigh.png" />
+        </div>
         <div class="end-info">
           <div class="record-info-container">
             <h2>최대</h2>
@@ -137,5 +138,9 @@
         하지 않을 수 있죠.
       </h2>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="./gsap.js"></script>
   </body>
 </html>
