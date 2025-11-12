@@ -1,0 +1,25 @@
+.info-card {
+  margin-bottom: 170px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.info-card__title {
+  margin-bottom: 16px;
+  width: 555px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.info-card__divider {
+  width: 555px;
+  margin-left: 0;
+}
+
+.info-card__subtitle {
+  margin-top: 10px;
+  font-size: 25;
+  font-weight: 400;
+  color: #9c9c9c;
+}

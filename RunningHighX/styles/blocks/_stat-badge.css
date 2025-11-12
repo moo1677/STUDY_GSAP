@@ -1,0 +1,14 @@
+.stat-badge {
+  margin-bottom: 60px;
+}
+
+.stat-badge__label {
+  font-size: 25px;
+  color: #fff;
+}
+
+.stat-badge__value {
+  font-size: 64px;
+  color: #ff3838;
+  margin: 20px 0;
+}

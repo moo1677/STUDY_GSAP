@@ -1,0 +1,41 @@
+.weight {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 2000px;
+  min-width: 1200px;
+  background-color: black;
+  margin: 0;
+}
+
+.weight__title {
+  margin-top: 300px;
+  width: 1000px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.weight__shoe {
+  width: 660px;
+  transform: rotate(-10deg);
+}
+
+.weight__feather {
+  width: 370px;
+  transform: rotate(40deg) translate(-250px, -350px);
+}
+
+.weight__grass {
+  min-width: 1200px;
+  width: 100%;
+  transform: translateY(-1500px);
+  z-index: -1;
+}
+
+.weight__text {
+  font-size: 100px;
+  transform: translateY(-2700px);
+  color: #fff;
+}

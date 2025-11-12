@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+  min-width: 1200px;
+  margin: 0;
+}
+
+strong {
+  font-size: 30px;
+  color: #fff;
+}
+
+.body-1 {
+  margin-bottom: 10px;
+}
+.body-2 {
+  margin-top: 0;
+}

@@ -1,0 +1,45 @@
+.summary {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 1138px;
+  width: 100%;
+  background-color: black;
+  margin: 0;
+}
+
+.summary__title {
+  margin-top: 30px;
+  font-size: 80px;
+  color: #fff;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.summary__container {
+  display: flex;
+  min-width: 1200px;
+  height: 600px;
+}
+
+.summary__shoe-wrapper {
+  flex: 0.7;
+  height: 600px;
+}
+
+.summary__shoe-image {
+  width: 1000px;
+}
+
+.summary__info-wrapper {
+  flex: 0.3;
+  margin-top: 6rem;
+  margin-left: 2rem;
+  height: 600px;
+}
+
+.summary__text {
+  width: 980px;
+  font-size: 25px;
+  color: #9c9c9c;
+}
