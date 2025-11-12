@@ -3,133 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <title>Running High X</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <section id="running-high-intro">
-      <h1 class="intro-title">RUNNING HIGH</h1>
-      <div class="x-graphic">
-        <div class="x-bar bar-1"></div>
-        <div class="x-bar bar-2"></div>
+    <section id="running-high-intro" class="intro">
+      <h1 class="intro__title">RUNNING HIGH</h1>
+      <div class="intro__x-graphic">
+        <div class="intro__x-bar intro__x-bar--1"></div>
+        <div class="intro__x-bar intro__x-bar--2"></div>
       </div>
-      <div class="shoe-container">
-        <img src="./asset/runninghigh.png" class="shoe" id="shoe-left" />
-        <img src="./asset/runninghigh.png" class="shoe" id="shoe-center" />
-        <img src="./asset/runninghigh.png" class="shoe" id="shoe-right" />
+      <div class="intro__shoe-container">
+        <img src="./asset/runninghigh.png" class="intro__shoe" id="shoe-left" />
+        <img
+          src="./asset/runninghigh.png"
+          class="intro__shoe"
+          id="shoe-center"
+        />
+        <img
+          src="./asset/runninghigh.png"
+          class="intro__shoe"
+          id="shoe-right"
+        />
       </div>
     </section>
-    <section id="running-high-design">
-      <div class="design-title">
-        <h1>공기 역학적 디자인.</h1>
-        <h1>시공간을 초월하기 위한 기반.</h1>
+    <section id="running-high-design" class="design">
+      <div class="design__title-group">
+        <h1 class="design__title">공기 역학적 디자인.</h1>
+        <h1 class="design__title">시공간을 초월하기 위한 기반.</h1>
       </div>
-      <h2 class="design-body">
+      <h2 class="design__body">
         새롭게 선보이는 Running HIGH X는 역대 최강의 러닝화 모델이 되도록 디자인
         되었습니다. 성능, 내구성, 착화감을 극대화 하는 공기 역학적 UniBody가
         바로 새 디자인의 핵심이죠.
       </h2>
       <video
-        id="shoeVideo"
+        class="design__video"
         src="./asset/runningHighX.mp4"
         preload="auto"
         muted
         playsinline
       ></video>
     </section>
-    <section id="shoe-features">
-      <div class="feature">
-        <div class="shoes-decom">
-          <img class="decom upper" src="./asset/upper.png" />
-          <img class="decom insole" src="./asset/insole.png" />
-          <img class="decom outsole" src="./asset/outsole.png" />
+    <section id="shoe-features" class="features">
+      <div class="features__container">
+        <div class="features__image-stack">
+          <img
+            class="features__image features__image-part--upper"
+            src="./asset/upper.png"
+          />
+          <img
+            class="features__image features__image-part--insole"
+            src="./asset/insole.png"
+          />
+          <img
+            class="features__image features__image-part--outsole"
+            src="./asset/outsole.png"
+          />
         </div>
-        <div class="shoes-info-container">
-          <div id="upper-info" class="shoes-info">
-            <h1>발이 시려울 정도의 놀라운 통기성</h1>
-            <hr />
-            <h2>샌드위치 메시</h2>
+        <div class="features__info-list">
+          <div id="upper-info" class="info-card">
+            <h1 class="info-card__title">발이 시려울 정도의 놀라운 통기성</h1>
+            <hr class="info-card__divider" />
+            <h2 class="info-card__subtitle">샌드위치 메시</h2>
           </div>
-          <div id="insole-info" class="shoes-info">
-            <h1>마치 구름 위를 걷는 듯한 쿠션감</h1>
-            <hr />
-            <h2>서브웨이 쿠션</h2>
+          <div id="insole-info" class="info-card">
+            <h1 class="info-card__title">마치 구름 위를 걷는 듯한 쿠션감</h1>
+            <hr class="info-card__divider" />
+            <h2 class="info-card__subtitle">서브웨이 쿠션</h2>
           </div>
-          <div id="outsole-info" class="shoes-info">
-            <h1>스프링을 달아 놓은 듯한 탄성력</h1>
-            <hr />
-            <h2>맥도날드 우레탄</h2>
+          <div id="outsole-info" class="info-card">
+            <h1 class="info-card__title">스프링을 달아 놓은 듯한 탄성력</h1>
+            <hr class="info-card__divider" />
+            <h2 class="info-card__subtitle">맥도날드 우레탄</h2>
           </div>
         </div>
       </div>
     </section>
-    <section id="feature-upper">
-      <div class="upper-title">
-        <h1>샌드위치 메시.</h1>
-        <h1>그 위대한 통풍성의 경험.</h1>
+    <section class="detail detail--upper" id="feature-upper">
+      <div class="detail__title-group">
+        <h1 class="detail__title">샌드위치 메시.</h1>
+        <h1 class="detail__title">그 위대한 통풍성의 경험.</h1>
       </div>
-      <h2 class="upper-body body-1">
+      <h2 class="detail__body">
         새로운 어퍼는 샌드위치 메시를 사용하여 강력한 통풍성을 제공합니다.
       </h2>
-      <h2 class="upper-body body-2">
+      <h2 class="detail__body">
         최대 100배의 온도 감소를 통해, 마치 냉장고를 신고 있는 경험을 해보세요.
       </h2>
-      <img id="upper" src="./asset/upper.png" />
+      <img class="detail__image" id="upper" src="./asset/upper.png" />
     </section>
-    <section id="feature-insole">
-      <div class="insole-title">
-        <h1>서브웨이 쿠션.</h1>
-        <h1>집밥과 같은 편안함.</h1>
+
+    <section class="detail detail--insole" id="feature-insole">
+      <div class="detail__title-group">
+        <h1 class="detail__title">서브웨이 쿠션.</h1>
+        <h1 class="detail__title">집밥과 같은 편안함.</h1>
       </div>
-      <h2 class="insole-body body-1">
+      <h2 class="detail__body">
         서브웨이 쿠션을 사용한 미드솔은 기존과의 쿠션과는 전혀 다릅니다.
       </h2>
-      <h2 class="insole-body body-2">
+      <h2 class="detail__body">
         마치 구름 위를 걷는 듯한 안정적이고 편안한 쿠션을 경험해보세요.
       </h2>
-      <img id="insole" src="./asset/insole.png" />
+      <img class="detail__image" id="insole" src="./asset/insole.png" />
     </section>
-    <section id="feature-outsole">
-      <div class="outsole-title">
-        <h1>맥도날드 우레탄.</h1>
-        <h1>스프링 그 이상의 탄력.</h1>
+
+    <section class="detail detail--outsole" id="feature-outsole">
+      <div class="detail__title-group">
+        <h1 class="detail__title">맥도날드 우레탄.</h1>
+        <h1 class="detail__title">스프링 그 이상의 탄력.</h1>
       </div>
-      <h2 class="outsole-body body-1">
+      <h2 class="detail__body">
         새로운 우레탄은 맥도날드 우레탄을 사용하여 대단한 탄력감을 제공합니다.
       </h2>
-      <h2 class="outsole-body body-2">
+      <h2 class="detail__body">
         마치 스프링을 신고 있는 듯한 경험을 해보세요.
       </h2>
-      <img id="outsole" src="./asset/outsole.png" />
+      <img class="detail__image" id="outsole" src="./asset/outsole.png" />
     </section>
-    <section id="shoes-weight">
-      <h1 class="weight-title">
+
+    <section class="weight" id="shoes-weight">
+      <h1 class="weight__title">
         Running HIGH라고 하는 데는 다 그만한 이유가 있다.
       </h1>
-      <img id="shoe" src="./asset/runninghigh.png" />
-      <img id="feather" src="./asset/feather.png" />
-      <img id="grass" src="./asset/grass.png" />
-      <h1 class="weight-text">무게를 잊은 편안함</h1>
+      <img class="weight__shoe" id="shoe" src="./asset/runninghigh.png" />
+      <img class="weight__feather" id="feather" src="./asset/feather.png" />
+      <img class="weight__grass" id="grass" src="./asset/grass.png" />
+      <h1 class="weight__text">무게를 잊은 편안함</h1>
     </section>
-    <section id="running-high-end">
-      <h1 class="end-title">멀찌감치 앞서다.</h1>
-      <div class="end-container">
-        <div class="end-shoe">
-          <img id="end-shoe" src="./asset/runninghigh.png" />
+
+    <section class="summary" id="running-high-end">
+      <h1 class="summary__title">멀찌감치 앞서다.</h1>
+      <div class="summary__container">
+        <div class="summary__shoe-wrapper">
+          <img
+            class="summary__shoe-image"
+            id="end-shoe"
+            src="./asset/runninghigh.png"
+          />
         </div>
-        <div class="end-info">
-          <div class="record-info-container">
-            <h2>최대</h2>
-            <h1>100배</h1>
-            <h2>기록 단축</h2>
+        <div class="summary__info-wrapper">
+          <div class="stat-badge">
+            <h2 class="stat-badge__label">최대</h2>
+            <h1 class="stat-badge__value">100배</h1>
+            <h2 class="stat-badge__label">기록 단축</h2>
           </div>
-          <div class="weight-info-container">
-            <h2>전체</h2>
-            <h1>15g</h1>
-            <h2>무게</h2>
+          <div class="stat-badge">
+            <h2 class="stat-badge__label">전체</h2>
+            <h1 class="stat-badge__value">15g</h1>
+            <h2 class="stat-badge__label">무게</h2>
           </div>
         </div>
       </div>
-      <h2 class="end-text">
+      <h2 class="summary__text">
         Running high X의 모든 곳에는 멀찍이 앞서 나갈 수 있는 혁신이 깃들어
         있습니다. 미드솔은 우리의 차세대 슈퍼베스트 디자인과 100배 더 가벼워진
         무게를 자랑하죠. 사내 테스트 기록으로 최대 100배 기록이 단축되는
