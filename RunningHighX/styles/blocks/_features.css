@@ -2,21 +2,22 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 1138px;
+  height: 100vh;
+  max-height: 2160px;
   min-width: 1200px;
   background-color: black;
   margin: 0;
 }
 
 .features__container {
-  margin-top: 100px;
+  margin-top: 10rem;
   width: 100%;
   display: flex;
 }
 
 .features__image-stack {
   flex: 0.6;
-  min-width: 645px;
+  min-width: 40rem;
   display: flex;
   align-items: center;
   flex-direction: column;

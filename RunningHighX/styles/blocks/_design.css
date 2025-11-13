@@ -2,36 +2,38 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 2000px;
+  height: 100vh;
+  max-height: 2160px;
   min-width: 1200px;
-  background-color: black;
   margin: 0;
 }
 
 .design__title-group {
-  margin-top: 88px;
+  margin-top: 10rem;
   margin-bottom: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 966px;
+  width: 60rem;
   height: 194;
 }
 
 .design__title {
-  font-size: 80px;
-  color: #fff;
+  color: white;
+  font-size: 5rem;
+  font-weight: 800;
   margin: 0;
 }
 
 .design__body {
   text-align: center;
-  width: 728px;
-  font-size: 25px;
+  width: 45rem;
+  font-size: 1.6rem;
   color: #9c9c9c;
 }
 
 .design__video {
   width: 50%;
+  margin-top: 6rem;
   margin-right: 6rem;
 }

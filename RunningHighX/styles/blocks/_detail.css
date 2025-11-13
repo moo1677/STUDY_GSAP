@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 1138px;
+  height: 100vh;
+  max-height: 2160px;
   min-width: 1200px;
   background-color: black;
   margin: 0;
@@ -19,22 +20,23 @@
 }
 
 .detail__title {
-  font-size: 80px;
+  font-size: 5rem;
+  font-weight: 800;
   color: #fff;
   margin: 0;
 }
 
 .detail__body {
   text-align: center;
-  width: 728px;
-  font-size: 25px;
+  width: 45rem;
+  font-size: 1.5rem;
   color: #9c9c9c;
   margin: 2px 0;
 }
 
 .detail__image {
-  margin-top: 180px;
-  width: 600px;
+  margin-top: 15rem;
+  width: 40rem;
 }
 .detail--insole {
   background-color: #1b1b1b;

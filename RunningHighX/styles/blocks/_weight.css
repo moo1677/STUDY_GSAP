@@ -2,40 +2,51 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 2000px;
+  height: 100vh;
+  max-height: 2160px;
   min-width: 1200px;
   background-color: black;
   margin: 0;
 }
 
 .weight__title {
-  margin-top: 300px;
-  width: 1000px;
+  margin-top: 20rem;
+  width: 60rem;
   text-align: center;
-  font-size: 80px;
-  font-weight: bold;
+  font-size: 5rem;
+  font-weight: 800;
   color: #fff;
 }
 
 .weight__shoe {
-  width: 660px;
+  width: 36rem;
   transform: rotate(-10deg);
 }
-
-.weight__feather {
-  width: 370px;
-  transform: rotate(40deg) translate(-250px, -350px);
+.weight__grass-scene {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .weight__grass {
-  min-width: 1200px;
   width: 100%;
-  transform: translateY(-1500px);
+  height: 100%;
   z-index: -1;
 }
-
+.weight__feather {
+  position: absolute;
+  top: 40%;
+  width: 20rem;
+  transform: rotate(40deg);
+  z-index: 1;
+}
 .weight__text {
-  font-size: 100px;
-  transform: translateY(-2700px);
+  position: absolute;
+  font-size: 6rem;
   color: #fff;
+  z-index: 1;
+  top: 20%;
+  text-align: center;
 }
