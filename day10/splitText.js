@@ -12,11 +12,10 @@ SplitText.create(".split1", {
   },
 });
 SplitText.create(".split2", {
-  type: "lines, words",
-  mask: "lines",
+  type: "lines, chars",
   autoSplit: true,
   onSplit(self) {
-    return gsap.from(self.words, {
+    return gsap.from(self.chars, {
       duration: 2,
       y: 100,
       autoAlpha: 0,
@@ -25,15 +24,18 @@ SplitText.create(".split2", {
   },
 });
 SplitText.create(".split3", {
-  type: "lines",
+  type: "lines , words",
   mask: "lines",
   autoSplit: true,
   onSplit(self) {
-    return gsap.from(self.lines, {
+    return gsap.from(self.words, {
       duration: 2,
       y: 100,
       autoAlpha: 0,
-      stagger: 0.05,
+      stagger: {
+        amount: 0.5,
+        from: "center",
+      },
     });
   },
 });
@@ -53,19 +55,23 @@ SplitText.create(".split4", {
   },
 });
 SplitText.create(".split5 h1", {
-  type: "chars",
+  type: "lines, chars",
+  mask: "lines",
   autoSplit: true,
-  linesClass: "lines++",
+
   onSplit(self) {
     return gsap.from(self.chars, {
       duration: 2,
-      y: 100,
+      scale: 0.4,
       autoAlpha: 0,
+      color: "red",
       stagger: {
         amount: 0.5,
         from: "center",
         grid: "auto",
       },
+      yoyo: true,
+      repeat: 5,
     });
   },
 });
