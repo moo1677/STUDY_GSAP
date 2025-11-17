@@ -1,0 +1,115 @@
+#section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: aliceblue;
+  border-radius: 20%;
+}
+.gradient-blue {
+  background-color: rgb(89, 136, 217);
+}
+.gradient-pink {
+  background-color: rgb(255, 149, 207);
+}
+
+.button1,
+.button2 {
+  margin: 2rem 0.5rem;
+}
+
+:root {
+  --color-just-black: #0e100f;
+  --color-surface-white: #fffce1;
+  --color-pink: #fec5fb;
+  --color-blue: #00bae2;
+}
+
+#section2 {
+  color: var(--color-surface-white);
+  background-color: var(--color-just-black);
+  font-family: Mori, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  text-align: center;
+  width: 100%;
+  height: 500px;
+  margin-top: 100px;
+  padding: 10rem 0;
+}
+
+.group.reorder {
+  flex-direction: row;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.group {
+  width: 740px;
+  height: auto;
+  padding: 4px;
+  margin: 1rem auto;
+  border: dashed 2px var(--color-surface-white);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--color-just-black);
+  position: relative;
+  border-radius: 10px;
+}
+
+.box {
+  margin: 4px;
+  padding: 8px;
+  line-height: 28px;
+  border-radius: 10px;
+}
+.box:nth-child(1) {
+  background-color: #bef3fe;
+}
+.box:nth-child(2) {
+  background-color: var(--color-blue);
+}
+.box:nth-child(3) {
+  background-color: var(--color-pink);
+}
+.box:nth-child(4) {
+  background-color: #e1faff;
+}
+
+.button3 {
+  margin: 0 auto;
+  display: inline-block;
+  outline: none;
+  padding: 8px 14px;
+  background: var(--dark);
+  border: solid 2px var(--color-surface-white);
+  color: var(--light);
+  text-decoration: none;
+  border-radius: 99px;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 18px;
+}
