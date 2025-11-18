@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  max-height: 2160px;
+  min-height: 1000px;
   min-width: 1200px;
   background-color: black;
   margin: 0;
@@ -31,6 +31,7 @@
 }
 
 .weight__grass {
+  min-width: 1200px;
   width: 100%;
   height: 100%;
   z-index: -1;
