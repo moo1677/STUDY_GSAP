@@ -136,67 +136,87 @@ ScrollTrigger.create({
   // id: "summary",
 });
 
-const purchase = gsap.timeline({
-  paused: true,
-  onStart: () => {
-    document.body.style.overflow = "hidden";
-  },
-  onReverseComplete: () => {
-    document.body.style.overflow = "auto";
-  },
-});
-purchase
-  .set(".buy-button", { autoAlpha: 0, cursor: "non" })
-  .set("#purchase-screen", { visibility: "visible" })
+const openButton = document.querySelector(".buy-button");
+const closeButton = document.querySelector(".return-button");
+const purchaseScreen = document.querySelector("#purchase-screen");
+const purchaseContent = document.querySelector(".purchase__content-wrapper");
+const body = document.body;
 
-  .to("#purchase-screen", {
-    y: 0,
-    ease: "power2.out",
-  })
+const openPurchase = () => {
+  const state = Flip.getState("[data-flip-id='morph-hero']");
 
-  .to(
-    "#purchase-screen",
-    {
-      height: "100vh",
-      duration: 0.6,
-      ease: "power3.inOut",
+  openButton.style.display = "none";
+  purchaseScreen.style.display = "flex";
+  closeButton.style.display = "block";
+  body.style.overflow = "hidden";
+
+  Flip.from(state, {
+    ease: "power3.inOut",
+    absolute: true,
+    onStart: () => {
+      gsap.to(purchaseContent, { opacity: 1, duration: 0.4, delay: 0.2 });
+      gsap.fromTo(
+        closeButton,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.3, delay: 0.3 }
+      );
     },
-    "-=0.2"
-  )
-  .to(".return-button", { visibility: "visible" }, "<");
-
-document.querySelector(".buy-button").addEventListener("click", () => {
-  purchase.play();
-});
-document.querySelector(".return-button").addEventListener("click", () => {
-  purchase.reverse();
-});
-
-const colorShoe = gsap.timeline({
-  paused: true,
-});
-
-colorShoe.to("#purchase-shoe", {
-  "--hue": "360deg",
-  duration: 1,
-  repeat: -1,
-});
-
-document.querySelector(".play-color-button").addEventListener("click", () => {
-  colorShoe.play();
-});
-document.querySelector(".stop-color-button").addEventListener("click", () => {
-  colorShoe.pause();
-});
-
-const sizeButton = document.querySelectorAll(".size__button");
-sizeButton.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const size = Number(e.target.textContent);
-    const scaleValue = size / 240;
-    console.log(scaleValue);
-    gsap.to("#purchase-shoe", {
-      scaleX: scaleValue,
-    });
   });
-});
+};
+const closePurchase = () => {
+  const state = Flip.getState("[data-flip-id='morph-hero']");
+
+  gsap.to(purchaseContent, { opacity: 0, duration: 0.2 });
+  gsap.to(closeButton, { opacity: 0, duration: 0.2 });
+
+  setTimeout(() => {
+    purchaseScreen.style.display = "none";
+    openButton.style.display = "block";
+    closeButton.style.display = "none";
+    body.style.overflow = "auto";
+    Flip.from(state, {
+      duration: 0.5,
+      ease: "power3.inOut",
+      absolute: true,
+      zIndex: 2001, // 돌아갈 때 버튼이 위에 보이도록
+    });
+  }, 200);
+};
+openButton.addEventListener("click", openPurchase);
+closeButton.addEventListener("click", closePurchase);
+
+// const purchase = gsap.timeline({
+//   paused: true,
+//   onStart: () => {
+//     document.body.style.overflow = "hidden";
+//   },
+//   onReverseComplete: () => {
+//     document.body.style.overflow = "auto";
+//   },
+// });
+// purchase
+//   .set(".buy-button", { autoAlpha: 0, cursor: "non" })
+//   .set("#purchase-screen", { visibility: "visible" })
+
+//   .to("#purchase-screen", {
+//     y: 0,
+//     ease: "power2.out",
+//   })
+
+//   .to(
+//     "#purchase-screen",
+//     {
+//       height: "100vh",
+//       duration: 0.6,
+//       ease: "power3.inOut",
+//     },
+//     "-=0.2"
+//   )
+//   .to(".return-button", { visibility: "visible" }, "<");
+
+// document.querySelector(".buy-button").addEventListener("click", () => {
+//   purchase.play();
+// });
+// document.querySelector(".return-button").addEventListener("click", () => {
+//   purchase.reverse();
+// });
