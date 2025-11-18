@@ -6,7 +6,6 @@
   height: 100vh;
   min-height: 1200px;
   min-width: 1200px;
-  padding-right: 200px;
   display: none;
   align-items: center;
   flex-direction: column;
@@ -17,7 +16,7 @@
 }
 .purchase__content-wrapper {
   opacity: 0;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
 
   display: flex;
@@ -25,7 +24,7 @@
   align-items: center;
 }
 .purchase__header {
-  width: 100vw;
+  width: 100%;
   height: 150px;
   margin: 0;
   padding-top: 40px;
@@ -41,7 +40,7 @@
 }
 .purchase__wrapper {
   display: flex;
-  width: 100vw;
+  width: 100%;
   padding-left: 200px;
 }
 .purchase__wrapper__shoe {
@@ -102,7 +101,7 @@
 }
 
 .purchase__footer {
-  width: 100vw;
+  width: 100%;
   background-color: #e3e3e3;
   margin-top: 100px;
   z-index: -3;
