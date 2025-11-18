@@ -139,10 +139,10 @@ ScrollTrigger.create({
 const purchase = gsap.timeline({
   paused: true,
   onStart: () => {
-    body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
   },
   onReverseComplete: () => {
-    body.style.overflow = "auto";
+    document.body.style.overflow = "auto";
   },
 });
 purchase
@@ -170,4 +170,33 @@ document.querySelector(".buy-button").addEventListener("click", () => {
 });
 document.querySelector(".return-button").addEventListener("click", () => {
   purchase.reverse();
+});
+
+const colorShoe = gsap.timeline({
+  paused: true,
+});
+
+colorShoe.to("#purchase-shoe", {
+  "--hue": "360deg",
+  duration: 1,
+  repeat: -1,
+});
+
+document.querySelector(".play-color-button").addEventListener("click", () => {
+  colorShoe.play();
+});
+document.querySelector(".stop-color-button").addEventListener("click", () => {
+  colorShoe.pause();
+});
+
+const sizeButton = document.querySelectorAll(".size__button");
+sizeButton.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const size = Number(e.target.textContent);
+    const scaleValue = size / 240;
+    console.log(scaleValue);
+    gsap.to("#purchase-shoe", {
+      scaleX: scaleValue,
+    });
+  });
 });
