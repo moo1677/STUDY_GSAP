@@ -7,10 +7,12 @@ ScrollTrigger.create({
   animation: intro,
   trigger: "#running-high-intro",
   start: "top top",
-  end: "+=2000",
+  end: "+=4000",
   pin: true,
   scrub: true,
   anticipatePin: 1,
+  // markers: true,
+  // id: "intro",
 });
 const shoeVideo = document.getElementById("shoeVideo");
 shoeVideo.addEventListener("loadedmetadata", () => {
@@ -27,8 +29,8 @@ ScrollTrigger.create({
   },
 });
 
-const shoesDeco = gsap.timeline();
-shoesDeco
+const features = gsap.timeline();
+features
   .to(
     ".features__image-part--upper",
     { x: "-=300", y: -100, rotation: 10 },
@@ -46,43 +48,45 @@ shoesDeco
   )
   .from(".info-card", { y: 50, autoAlpha: 0, stagger: 0.1 });
 ScrollTrigger.create({
-  animation: shoesDeco,
+  animation: features,
   trigger: "#shoe-features",
-  start: "top top+=100",
+  start: "center center",
   end: "+=1300",
   pin: true,
   scrub: true,
   anticipatePin: 1,
+  // markers: "true",
+  // id: "features",
 });
 
-const upper = gsap.timeline();
-upper
+const detailUpper = gsap.timeline();
+detailUpper
   .from("#upper", { y: "+=100", autoAlpha: 0 })
   .from(".detail__body--upper", { y: "+=50", autoAlpha: 0 }, "+=0.01<");
 ScrollTrigger.create({
-  animation: upper,
+  animation: detailUpper,
   trigger: "#feature-upper",
-  start: "top-=500 top",
+  start: "center-=200 center",
   anticipatePin: 1,
 });
-const insole = gsap.timeline();
-insole
+const detailInsole = gsap.timeline();
+detailInsole
   .from("#insole", { y: "+=100", autoAlpha: 0 })
   .from(".detail__body--insole", { y: "+=50", autoAlpha: 0 }, "+=0.01<");
 ScrollTrigger.create({
-  animation: insole,
+  animation: detailInsole,
   trigger: "#feature-insole",
-  start: "top-=500 top",
+  start: "center-=200 center",
   anticipatePin: 1,
 });
-const outsole = gsap.timeline();
-outsole
+const detailOutsole = gsap.timeline();
+detailOutsole
   .from("#outsole", { y: "+=100", autoAlpha: 0 })
   .from(".detail__body--outsole", { y: "+=50", autoAlpha: 0 }, "+=0.01<");
 ScrollTrigger.create({
-  animation: outsole,
+  animation: detailOutsole,
   trigger: "#feature-outsole",
-  start: "top-=500 top",
+  start: "center-=200 center",
   anticipatePin: 1,
 });
 
@@ -102,26 +106,32 @@ weightShoes
 ScrollTrigger.create({
   animation: weightShoes,
   trigger: "#shoes-weight",
-  start: "top top",
+  start: "center center",
   end: "+=3300",
   scrub: true,
+  // markers: true,
+  // id: "no-pin",
 });
 ScrollTrigger.create({
   trigger: "#shoes-weight",
-  start: "top top",
+  start: "center center",
   end: "+=2500",
   pin: true,
   anticipatePin: 1,
+  // markers: true,
+  // id: "pin",
 });
 
-const endShoe = gsap.timeline();
-endShoe
+const summary = gsap.timeline();
+summary
   .from("#end-shoe", { x: -10000, duration: 0.5 })
   .from(".summary__info-wrapper", { x: 100, autoAlpha: 0 })
   .from(".summary__text", { y: 100, autoAlpha: 0 }, "<");
 ScrollTrigger.create({
-  animation: endShoe,
+  animation: summary,
   trigger: "#running-high-end",
-  start: "top-=500 top",
+  start: "center-=300 center",
   anticipatePin: 1,
+  // markers: true,
+  // id: "summary",
 });
