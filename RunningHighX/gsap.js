@@ -135,3 +135,39 @@ ScrollTrigger.create({
   // markers: true,
   // id: "summary",
 });
+
+const purchase = gsap.timeline({
+  paused: true,
+  onStart: () => {
+    body.style.overflow = "hidden";
+  },
+  onReverseComplete: () => {
+    body.style.overflow = "auto";
+  },
+});
+purchase
+  .set(".buy-button", { autoAlpha: 0, cursor: "non" })
+  .set("#purchase-screen", { visibility: "visible" })
+
+  .to("#purchase-screen", {
+    y: 0,
+    ease: "power2.out",
+  })
+
+  .to(
+    "#purchase-screen",
+    {
+      height: "100vh",
+      duration: 0.6,
+      ease: "power3.inOut",
+    },
+    "-=0.2"
+  )
+  .to(".return-button", { visibility: "visible" }, "<");
+
+document.querySelector(".buy-button").addEventListener("click", () => {
+  purchase.play();
+});
+document.querySelector(".return-button").addEventListener("click", () => {
+  purchase.reverse();
+});
