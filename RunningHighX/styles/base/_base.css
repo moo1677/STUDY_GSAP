@@ -2,6 +2,7 @@ body {
   background-color: black;
   min-width: 1200px;
   margin: 0;
+  font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
 strong {
