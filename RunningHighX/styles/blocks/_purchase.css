@@ -1,28 +1,172 @@
 .purchase {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   width: 100vw;
+  height: 100vh;
   min-height: 1200px;
   min-width: 1200px;
+  padding-right: 200px;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
 
   background-color: rgb(255, 255, 255);
+  z-index: 2000;
+}
+.purchase__content-wrapper {
+  opacity: 0;
+  width: 100vw;
+  box-sizing: border-box;
 
-  z-index: 1000;
-  height: 20vh; /* 1단계: 작은 창 (높이 20%) */
-  transform: translateY(100%); /* 화면 아래쪽 밖으로 숨김 */
-  visibility: hidden; /* 완전히 숨김 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.purchase__header {
+  width: 100vw;
+  height: 150px;
+  margin: 0;
+  padding-top: 40px;
+  padding-left: 210px;
+}
+.purchase__header__title {
+  font-size: 60px;
+  font-weight: 800;
+  margin: 0;
+}
+.purchase__header_sub {
+  font-size: 40px;
+}
+.purchase__wrapper {
+  display: flex;
+  width: 100vw;
+  padding-left: 200px;
+}
+.purchase__wrapper__shoe {
+  margin-right: 50px;
+  flex: 1;
+  border-radius: 20px;
+  min-width: 600px;
+  min-height: 400px;
+  background-color: #dedede;
+  z-index: -3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  height: 800px;
+  align-self: flex-start;
+}
+.purchase__button__wrapper {
+  width: 400px;
+  padding-right: 100px;
+}
+.purchase__button {
+  width: 300px;
+  height: 70px;
+  border-radius: 15px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border: solid 1px #7e7e7e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.wrapper__container {
+  margin-bottom: 200px;
+}
+.wrapper__container h4 {
+  font-size: 20px;
+  color: #777777f0;
+}
+.wrapper__container strong {
+  font-size: 22px;
+  color: #414141;
+}
+.purchase__button h5 {
+  font-weight: 500;
+  font-size: 20px;
+  color: #373737;
+}
+.purchase__button h6 {
+  font-weight: 300;
+  font-size: 13px;
+  color: #909090;
+}
+
+.purchase__footer {
+  width: 100vw;
+  background-color: #e3e3e3;
+  margin-top: 100px;
+  z-index: -3;
+  padding-bottom: 30px;
+}
+.footer__wrapper {
+  display: flex;
+  padding: 36px 100px;
+}
+.footer__lf {
+  flex: 1;
+  min-width: 600px;
+  min-height: 500px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.shoe__container {
+  display: flex;
+}
+.footer__lf h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+.footer__lf h2 {
+  margin-top: 0;
+  font-size: 46px;
+  margin-bottom: 0;
+  font-weight: 800;
+  color: #8d8d8d;
+  text-align: start;
+}
+.footer__rt {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buy-shoes {
+  width: 60%;
+  border-radius: 12px;
+  height: 50px;
+  background-color: #7d7d7d;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
 }
 #purchase-shoe {
-  --hue: 0deg; /* 색조 회전 각도 (GSAP로 조작할 것) */
-  --sat: 500%; /* 채도 (고정할 값) */
-  --bright: 80%; /* 밝기 (고정할 값) */
+  --hue: 0deg;
+  --sat: 500%;
+  --bright: 80%;
 
-  /* 2. 변수를 사용해 필터 조합 */
   filter: hue-rotate(var(--hue)) saturate(var(--sat)) brightness(var(--bright));
-  width: 300px;
+  width: 500px;
+}
+
+.more-shoe {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  transform: translate(-5%, -10px);
 }

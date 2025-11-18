@@ -1,23 +1,23 @@
-.buy-button,
-.return-button:hover,
-.return-button {
+.purchase-button {
   position: fixed;
-  height: 3rem;
-  width: 7rem;
-  background-color: rgb(0, 0, 0);
-  border-radius: 20px;
-  border: solid 2px rgb(116, 116, 116);
   bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
-  color: #fff;
+  z-index: 2200;
+
+  height: 3rem;
+  width: 7rem;
+
+  border-radius: 20px;
   font-size: 1rem;
+
   cursor: pointer;
-  transition: 0.3s ease-in-out;
-  z-index: 1001;
 }
-.return-button {
-  visibility: hidden;
+.buy-button,
+.return-button:hover {
+  border: solid 2px rgb(116, 116, 116);
+  background-color: rgb(0, 0, 0);
+  color: #fff;
 }
 .buy-button:hover,
 .return-button {
@@ -25,7 +25,7 @@
   border: solid 2px rgb(116, 116, 116);
   color: #000000;
 }
-#test__shoe {
-  width: 200px;
-  filter: hue-rotate(-30deg);
+
+.return-button {
+  display: none;
 }
