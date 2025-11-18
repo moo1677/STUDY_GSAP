@@ -220,3 +220,57 @@ closeButton.addEventListener("click", closePurchase);
 // document.querySelector(".return-button").addEventListener("click", () => {
 //   purchase.reverse();
 // });
+
+const colorShoe = gsap.timeline({
+  paused: true,
+});
+
+colorShoe.to("#purchase-shoe", {
+  "--hue": "360deg",
+  duration: 1,
+  repeat: -1,
+});
+
+document.querySelector(".play-color-button").addEventListener("click", () => {
+  colorShoe.play();
+});
+document.querySelector(".stop-color-button").addEventListener("click", () => {
+  colorShoe.pause();
+});
+
+const sizeButton = document.querySelectorAll(".size__button");
+sizeButton.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const size = Number(e.currentTarget.dataset.size);
+    const scaleValue = size / 240;
+    gsap.to("#purchase-shoe", {
+      scaleX: scaleValue,
+    });
+  });
+});
+const moreShoe = document.querySelectorAll(".more-shoe");
+const shoeOneButton = document
+  .querySelector(".shoe-one")
+  .addEventListener("click", () => {
+    gsap.to(moreShoe, {
+      visibility: "hidden",
+      autoAlpha: 0,
+    });
+    gsap.to(".origin-shoe", {
+      x: 0,
+      y: 0,
+    });
+  });
+
+const shoeTwoButton = document
+  .querySelector(".shoe-two")
+  .addEventListener("click", () => {
+    gsap.to(moreShoe, {
+      visibility: "visible",
+      autoAlpha: 1,
+    });
+    gsap.to(".origin-shoe", {
+      x: 5,
+      y: 5,
+    });
+  });
