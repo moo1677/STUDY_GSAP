@@ -89,10 +89,18 @@
   font-size: 22px;
   color: #414141;
 }
-.purchase__button h5 {
+.purchase__button h5,
+.play-color-button,
+.stop-color-button {
   font-weight: 500;
   font-size: 20px;
   color: #373737;
+}
+.play-color-button,
+.stop-color-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .purchase__button h6 {
   font-weight: 300;
